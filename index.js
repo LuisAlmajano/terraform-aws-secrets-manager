@@ -1,4 +1,5 @@
 // Ref: https://banhawy.medium.com/securely-storing-and-retrieving-environment-variables-in-node-js-3cabc65623b
+// Ref2: https://medium.com/intelliconnect-engineering/how-to-store-and-retrieve-your-secret-keys-using-aws-secrets-manager-727db222b785
 
 const AWS = require("aws-sdk");
 AWS.config.update({ region: "eu-central-1" });
@@ -32,4 +33,4 @@ async function getSecret(secretName) {
 console.log(getSecret("my-app/tf/my-secret"));
 
 // Secret manually created in the AWS Console:
- console.log(getSecret("my-app/terraform/my-secret"));
+console.log(getSecret("my-app/terraform/my-secret"));
